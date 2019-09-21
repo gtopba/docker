@@ -79,7 +79,9 @@ ENV ODOO_RC /etc/odoo/odoo.conf
 
 # Set default user when running the container
 USER odoo
-RUN ls -la /mnt/extra-addons
-RUN ls -la /mnt/backup
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["odoo"]
+
+RUN ls -la /mnt/extra-addons
+RUN ls -la /mnt/backup
